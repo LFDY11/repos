@@ -6,9 +6,10 @@
 double **initialArray()
 { 
   int i,j;
-  double **res = (double **)malloc(2*N*sizeof(double*));
+  double **res;
+  res = new double * N ;
   for(i = 0; i<2*N; i++)
-  res[i] = (double*) malloc(2*N*sizeof(double));
+	  res[i] = new double N;
 
   for(i = 0; i<2*N; i++)
   for(j = 0; j<2*N; j++)
