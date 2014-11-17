@@ -1,0 +1,61 @@
+#include <conio.h>
+#include <iostream.h>
+#include <iomanip.h>
+#include <math.h>
+ 
+
+ 
+int main()
+{
+
+	int *Array,n,i;
+	cin>>n;
+	
+	Array=new int[n];
+
+	for(i=0;i<n;i++)
+	{
+		*(Array+i)=i;
+
+	}
+
+
+
+
+	int **Array2d;
+	
+	Array2d=new int*[n*n];
+
+	
+
+	int stepen(0);
+ 
+	for ( i=0;i<n*n;i++)
+	{
+		Array2d[i]=new int[n];
+		for (int j=0;j<n*n;j++)
+		{	
+
+			Array2d[i][j]=1/*powf(Array[j],stepen)*/;
+			cout<<setw(4);
+			cout<<Array2d[i][j];
+		} 
+		
+		cout<<endl;
+	}
+	
+
+
+
+
+
+
+	delete []Array;
+	 
+	for (i=0;i<n*n;i++)	delete[] Array2d[i];
+	delete []Array2d;
+
+	_getch();
+	return 0;
+ 
+}
